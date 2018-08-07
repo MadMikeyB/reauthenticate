@@ -1,4 +1,7 @@
 # Reauthenticate
+
+This package is a fork of mpociot/reauthenticate, with two extra features and the readme instructions updated to Laravel 5.5+ which is the new LTS version of Laravel.
+
 ## Because sometimes, you want that extra layer of security
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE.md)
