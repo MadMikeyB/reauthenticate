@@ -1,18 +1,10 @@
 # Reauthenticate
 
-This package is a fork of mpociot/reauthenticate, with two extra features and the readme instructions updated to Laravel 5.5+ which is the new LTS version of Laravel.
-
 ## Because sometimes, you want that extra layer of security
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE.md)
-[![Build Status](https://travis-ci.org/mpociot/reauthenticate.svg)](https://travis-ci.org/mpociot/reauthenticate)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mpociot/reauthenticate/badges/quality-score.png?b=master&)](https://scrutinizer-ci.com/g/mpociot/reauthenticate/?branch=master)
-[![codecov.io](https://codecov.io/github/mpociot/reauthenticate/coverage.svg?branch=master)](https://codecov.io/github/mpociot/reauthenticate?branch=master)
-[![StyleCI](https://styleci.io/repos/45939836/shield?style=flat)](https://styleci.io/repos/45939836)
 
 Reauthenticate users by letting them re-enter their passwords for specific parts of your app (for Laravel 5).
-
-
 
 ```php
 Route::group(['middleware' => ['auth','reauthenticate']], function () {
@@ -24,25 +16,28 @@ Route::group(['middleware' => ['auth','reauthenticate']], function () {
 });
 ```
 
+## Note 
+This package is a fork of [mpociot/reauthenticate](https://github.com/mpociot/reauthenticate), with two extra features and the readme instructions updated to Laravel 5.5+ which is the new LTS version of Laravel.
+
+**I do not take credit for this work, I simply forked it and modified it.** A PR was submitted but not addressed, thus, this fork was published to packagist.
 
 ## Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Configuration](#configuration)
 - [License](#license)
 
 ## Installation
+<a name="installation" id="installation"></a>
+In order to add reauthenticate to your project, just  run the following command in terminal:
 
-In order to add reauthenticate to your project, just add
-
-    "mpociot/reauthenticate": "~1.0"
-
-to your composer.json. Then run `composer install` or `composer update`.
-
-Or run `composer require mpociot/reauthenticate ` if you prefer that.
+```
+composer require madmikeyb/reauthenticate
+```
 
 ## Usage
-
+<a name="usage" id="usage"></a>
 ### Add the middleware to your Kernel
 
 In your `app\Http\Kernel.php` file, add the reauthenticate middleware to the `$routeMiddleware` array.
@@ -116,6 +111,7 @@ That's it.
 Once the user successfully reauthenticates, the valid login will be stored for 30 minutes by default.
 
 ## Optional Configuration
+<a name="configuration" id="configuration"></a>
 
 Reauthenticate can be (optionally) configured through your `config/app.php` file. The following keys are supported:
 
