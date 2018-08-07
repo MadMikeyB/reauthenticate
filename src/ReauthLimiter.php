@@ -36,11 +36,11 @@ class ReauthLimiter
      * @param \Illuminate\Http\Request $request
      * @param string                   $key
      */
-    public function __construct(Request $request, $key = null, $reauthTime = null)
+    public function __construct(Request $request)
     {
         $this->request = $request;
-        $this->key = $key ?: $this->key;
-        $this->reauthTime = $reauthTime ?: $this->reauthTime;
+        $this->key = config('app.reauthenticate_key') ?: $this->key;
+        $this->reauthTime = config('app.reauthenticate_time') ?: $this->reauthTime;
     }
 
     /**
