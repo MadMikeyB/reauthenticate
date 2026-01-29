@@ -1,3 +1,9 @@
+# Abandoned
+
+Starting from Laravel 6, the framework ships with a built-in Illuminate\Auth\Middleware\RequirePassword middleware aliased as password.confirm that does the same job.
+
+[https://laravel.com/docs/authentication#password-confirmation](https://laravel.com/docs/authentication#password-confirmation)
+
 # Reauthenticate
 
 ## Because sometimes, you want that extra layer of security
